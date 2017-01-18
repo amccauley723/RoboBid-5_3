@@ -2,12 +2,14 @@
 
 namespace App;
 
+use Laravel\Cashier\Billable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Billable; //able to subscribe
+    use Notifiable; //able to receive email notifications
 
     /**
      * The attributes that are mass assignable.
